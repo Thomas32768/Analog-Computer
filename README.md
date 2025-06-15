@@ -1,4 +1,8 @@
 # Analog-Computer
 A simple general purpose analog computer.
 
+# Introduction
+The Analog Computer V 1.0 is constructed with the purpose of being used as a general purpose yet simple analog computer capable of solving some simpler differential equations. To use the analog computer, wires must be set up between the pins of various functions on the board and an output sent to an oscilloscope to display the output voltage. A useful resource for how to set up the analog computer to simulate various things is [here] (https://the-analog-thing.org/THAT_First_Steps.pdf). Which shows various Differential equations and how to solve them using an analog computer. However, The-Analog-Things's analog computer has multipliers and comparators which this analog computer does not have built in, this allows their analog computer to solve a wider range of differential equations, however it is entirely possible to solve such equations using this analog computer by using external multipliers and circuits on breadboards to expand its capabilities. Power for such circuits may be taken from the +15v, -15v and ground rails available on the board, however it is important to remember to take care as the +15/-15 v power supply can only supply a limited current. Remember to always check components datasheets before use.
+
 ![Photo of the finished circuit board design.](/Board.PNG)
+# Figure 1. Finished board design showing the general board layout.
