@@ -36,3 +36,37 @@ The summers are made to continuously sum voltages, they allow for multiple input
 * OUTPUT – Output of the summer, sum of input voltages (V_out).
 * X10 – Input weighted to be 10x the input value.
 * INPUTS – Inputs for the summer, all 3 are connected to the same summing junction via 10k and 1k resistors (x10 input) (V_in).
+
+# Inverters
+![Screenshot of the inputs/outputs for the inverters.](/Images/inverter.PNG)
+### Figure 4. Inputs/outputs for the inverters.
+
+```math
+V_{out} = - V_{in}
+```
+The inverters continuously invert the voltage present at their input.
+OUT – Output pin (V_out), inverted voltage.
+IN – Input pin (V_in), voltage to be inverted.
+
+# Coeficents
+![Screenshot of the inputs/outputs for the Coeficents.](/Images/Coef.PNG)
+### Figure 4. Inputs/outputs for the Coeficents.
+
+```math
+V_{out} = aV_{in} {0<=a<=1}
+```
+Coefficients or Coef’s take an input voltage and multiply it by a constant factor between 0 and 1, then output this voltage. The factor can be changed by adjusting the 4 coefficient potentiometers at the bottom of the board.
+OUT – Output pin (V_out), output voltage.
+IN – Input pin (V_in), input voltage.
+
+# Trigger and Reset
+![Screenshot of the inputs/outputs for the inverters.](/Images/Trigger.PNG)
+### Figure 4. Outputs for the Trigger and reset.
+
+The trigger and reset system is designed to reset the integrators to their respective initial conditions when specified. There are two modes which may be selected using the switch at the top of the board that says ‘MANUAL AUTO ‘. When Manual is selected, the integrators will continuously integrate indefinitely unless the reset button is pressed, this will reset the integrators to their initial conditions and a new integration will start.
+
+When auto is selected the integrators will automatically reset after a fixed time interval, this time interval can be set by the potentiometer at the top of the board labelled reset rate. This also allows for the coefficients to be adjusted and see their effect in real time.
+
+The trigger outputs are for attaching oscilloscopes to see the repeating output, the signal is between 0 and 5v and is high while operating, the oscilloscope should be set up to trigger on the rising edge of the signal.
+
+While the analog computer is in normal operation the ‘OPERATING’ led will be illuminated.
