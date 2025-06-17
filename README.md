@@ -8,7 +8,7 @@ The Analog Computer V 1.0 is constructed with the purpose of being used as a gen
 ### Figure 1. Finished board design showing the general board layout.
 
 # Integrators
-![Screenshot of the inputs/outputs for the integrators.](/Images/integrators.PNG )
+![Screenshot of the inputs/outputs for the integrators.](/Images/integrator.PNG)
 ### Figure 2. Inputs/outputs for the integrators.
 
 ```math
@@ -25,8 +25,12 @@ Pinout:
 * IC – Initial condition, this is the starting value for the integrator and is the +c that is added after integration, note that this pin is only used when the integrator is not operating and is only for constant voltages (V_IC).
 
 # Summers
-![Screenshot of the inputs/outputs for the summers.](/Images/Summers.PNG )
+![Screenshot of the inputs/outputs for the summers.](/Images/Summer.PNG)
 ### Figure 3. Inputs/outputs for the summers.
+
+```math
+V_{out} = \sum V_{in}
+```
 
 The summers are made to continuously sum voltages, they allow for multiple inputs including one 10x input, all three inputs are connected to the same summing junction. Note that the summer does not invert the sum of the signals, this is important as some analog computers do invert their signals.
 * OUTPUT – Output of the summer, sum of input voltages (V_out).
